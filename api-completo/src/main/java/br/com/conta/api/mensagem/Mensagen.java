@@ -1,24 +1,23 @@
 package br.com.conta.api.mensagem;
-import java.util.UUID;
 
+import java.util.UUID;
 import br.com.conta.api.Usuario.Usuario;
 
-public abstract class Mensagem {
+public abstract class Mensagen {
     
     private String data;
     private Usuario sender;
     private Usuario receiver;
     private String id;
 
-    public Mensagem(Usuario sender, Usuario receiver, String data) {
+    public Mensagen(Usuario sender, Usuario receiver, String data) {
 
-        this.sender = sender;
-        this.receiver = receiver;
-        this.data = data;
-        this.id = UUID.randomUUID().toString();
-    }
+         this.sender = sender;
+         this.receiver = receiver;
+         this.data = data;
+         this.id = UUID.randomUUID().toString();
+     }
 
- 
     public Usuario getSender() {
         return sender;
     }
@@ -36,18 +35,16 @@ public abstract class Mensagem {
     }
 
     public String getData() {
-        return data;
+         return data;
     }
 
     public void setData(String data) {
         this.data = data;
     }
 
-
     public String getId() {
         return id;
     }
-
 
     public void setId(String id) {
         this.id = id;
