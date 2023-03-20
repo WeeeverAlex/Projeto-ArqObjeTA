@@ -23,8 +23,6 @@ public class MensagemController {
         return "Mensagem";
     }
 
-    // --- 1  e 2 ---
-
     @PostMapping("/texto")
     public MensagemTexto createMensagemTexto(@RequestBody @Valid MensagemTexto mensagem ) {
         return mensagemService.createTextMessage(mensagem);
@@ -34,8 +32,6 @@ public class MensagemController {
     public MensagemArquivo creareMensagemArquivo(@RequestBody @Valid MensagemArquivo mensagem ) {
         return mensagemService.createArquivoMessage(mensagem );
     }
-
-    // --- 3 ---
 
     @GetMapping("/texto")
     public List<MensagemTexto> getAllMensagensTexto() {
@@ -47,8 +43,6 @@ public class MensagemController {
         return mensagemService.getAllMensagensArquivo();
     }
 
-    // --- 4 ---
-
     @GetMapping("/texto/{msgId}")
     public MensagemTexto getMensagemTexto(@PathVariable String msgId) {
         return mensagemService.getMensagensTexto(msgId);
@@ -59,7 +53,6 @@ public class MensagemController {
         return mensagemService.getMensagensArquivo(msgId);
     }
 
-    // --- 5 ---
     @GetMapping("/arquivo/{userId}/user")
     public List<MensagemArquivo> getMensagensArquivoUser(@PathVariable Integer userId) {
         return mensagemService.getMensagensArquivoByUser(userId);

@@ -17,10 +17,10 @@ import lombok.Setter;
 public class MensagemArquivo  {
 
     @Column(name = "nome_arquivo")
-    private String nome_arquivo;
+    private String nome_do_arquivo;
 
-    @Column(name = "link_arquivo")
-    private String caminho_arquivo;
+    @Column(name = "caminho_arquivo")
+    private String caminho_do_arquivo;
 
     @Column(name = "sender")
     private Usuario sender;

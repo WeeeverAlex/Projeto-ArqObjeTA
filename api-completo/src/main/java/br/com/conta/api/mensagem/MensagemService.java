@@ -16,11 +16,9 @@ public class MensagemService {
     @Autowired
     private static MensagemTextoRepository mensagemTextoRepository;
 
-
     @Autowired
     private static UsuarioService UsuarioServiceInstance;
     
-
     public MensagemTexto createTextMessage(MensagemTexto msg)  {    
         Usuario sender = UsuarioServiceInstance.getUsuario(msg.getSender().getId());
         if (sender == null) { 

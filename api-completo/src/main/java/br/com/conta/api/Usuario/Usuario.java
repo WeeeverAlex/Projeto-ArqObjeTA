@@ -21,9 +21,6 @@ public class Usuario {
     @Column(name = "email", unique = true)
     private  String email;
 
-    @Column(name = "aniversario")
-    private String aniversario;
-
     @Column(name = "identifier", nullable = false, unique = true)
     private String identifier;
 
